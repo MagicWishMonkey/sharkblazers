@@ -105,6 +105,15 @@ def parse_date(txt):
         raise Exception("Invalid date format-> '%s' could not be parsed.\n%s" % (txt, ex.message))
 
 
+def to_ascii(txt):
+    if txt is None or not isinstance(txt, basestring):
+        return txt
+    try:
+        return txt.encode("ascii", "ignore")
+    except Exception, ex:
+        raise ex
+
+
 class io:
     @staticmethod
     def path_concat(uri, relative):

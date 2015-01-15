@@ -15,8 +15,10 @@ application = get_wsgi_application()
 
 
 # from sharkblazers import util
-# first_names = util.io.read_file("/Work/personal/sharkblazers/resources/first_names.txt")
-# first_names = first_names.split("\n")
-# while first_names[len(first_names) - 1] == "":
-#     first_names = first_names[0:len(first_names) - 1]
-# print "%s first names" % str(len(first_names))
+# from faker.fake_factory import Factory
+# factory = Factory()
+#
+# for x in xrange(20):
+#     o = factory.create()
+#     print util.json(o, indent=2)
+# print ""
