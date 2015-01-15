@@ -1,0 +1,67 @@
+{
+    "ALLOWED_HOSTS": [
+        "*"
+    ],
+    "DEBUG": false,
+    "TEMPLATE_DEBUG": false,
+    "SECRET_KEY": "yAf9dicT8eM1erM8I4oW7Ug7Av1iaL7naS9eY1roj0Poowm0E6",
+    "ADMINS": [
+        "ron@razorvision.net"
+    ],
+
+    "DATABASES": {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "NAME": "sharkblazers",
+            "USER": "shark",
+            "PASSWORD": "blazer",
+            "HOST": "127.0.0.1",
+            "PORT": "5432"
+        }
+    },
+
+    "SMTP": {
+        "host": "localhost",
+        "port": 25,
+        "username": "",
+        "password": "",
+        "default_address": "ron@sharkblazers.com"
+    },
+
+    "LOGGING": {
+        "disable_existing_loggers": false,
+        "formatters": {
+            "simple": {
+                "format": "%(levelname)s %(message)s"
+            },
+            "verbose": {
+                "datefmt": "%d/%b/%Y %H:%M:%S",
+                "format": "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s"
+            }
+        },
+        "handlers": {
+            "file": {
+                "class": "logging.FileHandler",
+                "filename": "/var/www/sharkblazers.log",
+                "formatter": "verbose",
+                "level": "DEBUG"
+            }
+        },
+        "loggers": {
+            "customer_site": {
+                "handlers": [
+                    "file"
+                ],
+                "level": "DEBUG"
+            },
+            "django": {
+                "handlers": [
+                    "file"
+                ],
+                "level": "DEBUG",
+                "propagate": true
+            }
+        },
+        "version": 1
+    }
+}
