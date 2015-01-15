@@ -1,5 +1,5 @@
 """
-Django settings for customer_site project.
+Django settings for the project.
 """
 
 import os
